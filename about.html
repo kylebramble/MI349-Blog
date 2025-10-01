@@ -18,6 +18,16 @@
     nav a { text-decoration: none; color: #0b3d91; }
     main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
     figure img { max-width: 100%; height: auto; border-radius: 6px; }
+    form fieldset { border: 1px solid #ddd; padding: 1rem; border-radius: 6px; margin-top: 2rem; }
+    label { display: block; margin-top: 0.8rem; }
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      padding: 0.6rem;
+      font-family: inherit;
+      font-size: inherit;
+    }
+    textarea { min-height: 120px; }
+    button { margin-top: 1rem; padding: 0.6rem 1rem; font-family: inherit; font-size: inherit; }
     footer { padding: 2rem 1rem; margin-top: 3rem; }
   </style>
 </head>
@@ -39,13 +49,12 @@
         <h2>About Me</h2>
       </header>
 
-
       <figure>
-<img src="anon.jpeg" alt="Anonymous photo">
+        <img src="anon.jpeg" alt="Anonymous photo">
       </figure>
 
       <p>
-        Hello, my name is Kyle Bramble and this is my blog. There are many like it, but this is the best. Not convinced? well, you should be. Go take a gander at the othher pages if you need assurance.
+        Hello, my name is Kyle Bramble and this is my blog. There are many like it, but this is the best. Not convinced? Well, you should be. Go take a gander at the other pages if you need assurance.
       </p>
 
       <h3>My favorite food</h3>
@@ -54,9 +63,30 @@
         <li>Pasta</li>
         <li>Noodles with red sauce</li>
         <li>Texas Roadhouse rolls</li>
-      </<>
-    <artp>
-      </p>
+      </ul>
+    </article>
+
+    <section aria-labelledby="feedback">
+      <h2 id="feedback">Leave Feedback</h2>
+      
+      <form name="about-feedback" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="about-feedback">
+        <fieldset>
+          <legend>Tell me what you think about this page</legend>
+
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your thoughts…"></textarea>
+
+          <button type="submit">Send Feedback</button>
+        </fieldset>
+      </form>
+    </section>
   </main>
 
   <footer>

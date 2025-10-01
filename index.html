@@ -25,7 +25,12 @@
     thead th { background: #fafafa; }
     form fieldset { border: 1px solid #ddd; padding: 1rem; border-radius: 6px; }
     form label { display: block; margin-top: 0.8rem; }
-    input[type="text"], input[type="email"] { width: 100%; padding: 0.6rem; font-family: inherit; font-size: inherit; }
+    input[type="text"], input[type="email"], textarea, select {
+      width: 100%;
+      padding: 0.6rem;
+      font-family: inherit;
+      font-size: inherit;
+    }
     button { margin-top: 1rem; padding: 0.6rem 1rem; font-family: inherit; font-size: inherit; }
     footer { padding: 2rem 1rem; margin-top: 3rem; }
   </style>
@@ -55,11 +60,11 @@
       </header>
 
       <figure>
- <img src="best.jpeg" alt="Best photo">
+        <img src="best.jpeg" alt="Best photo">
       </figure>
 
       <p>
-      Welcome to the greatest blog post ever written—seriously. This masterpiece blends crisp insights, clear takeaways, and just the right dash of personality to keep you hooked from the first sentence to the final period. You’ll find practical tips you can use today, a story worth sharing, and a voice that treats you like a friend, not a lecture hall. If you came for value, you’ll leave with new ideas; if you came for entertainment, you’ll leave smiling. Grab your coffee, settle in, and enjoy the best blog post you’ll read all week.
+        Welcome to the greatest blog post ever written—seriously. This masterpiece blends crisp insights, clear takeaways, and just the right dash of personality to keep you hooked from the first sentence to the final period. You’ll find practical tips you can use today, a story worth sharing, and a voice that treats you like a friend, not a lecture hall. If you came for value, you’ll leave with new ideas; if you came for entertainment, you’ll leave smiling. Grab your coffee, settle in, and enjoy the best blog post you’ll read all week.
       </p>
       <p>
         And just when you think it couldn’t get any better, this blog post goes above and beyond by giving you something rare: a genuine spark of inspiration. It doesn’t just inform—it motivates. It doesn’t just tell a story—it invites you to be part of it. That’s why readers keep coming back, sharing it with friends, and bookmarking it for later. This isn’t just another article floating around the internet; it’s a standard-setter, a bold declaration that great writing still matters, and you’ve found it right here.
@@ -67,26 +72,26 @@
       
       <h3>Deep Analysis of Other Blogs</h3>
       <table>
-  <thead>
-    <tr>
-      <th>This blog</th>
-      <th>Other blogs</th>
-      <th>Empty Column?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>The Best</td>
-      <td>Literal garbage</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>funny!</td>
-      <td>funny?</td>
-      <td>Indeed</td>
-    </tr>
-  </tbody>
-</table>
+        <thead>
+          <tr>
+            <th>This blog</th>
+            <th>Other blogs</th>
+            <th>Empty Column?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>The Best</td>
+            <td>Literal garbage</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>funny!</td>
+            <td>funny?</td>
+            <td>Indeed</td>
+          </tr>
+        </tbody>
+      </table>
     </article>
 
     <article>
@@ -100,27 +105,77 @@
         </p>
       </header>
 
-        <figure>
-<img src="dj.jpeg" alt="DJ photo">
+      <figure>
+        <img src="dj.jpeg" alt="DJ photo">
       </figure>
 
       <p>
-     What makes this blog post even more special is that it’s the very first one to ever appear here. A true beginning, a starting point, and a foundation for everything that comes next. 
+        What makes this blog post even more special is that it’s the very first one to ever appear here. A true beginning, a starting point, and a foundation for everything that comes next. 
       </p>
       <p>
         There’s a certain magic about firsts—they set the tone, capture the excitement, and remind us that every great journey starts with a single step. This post isn’t just content on a page; it’s history in the making, the cornerstone of a blog that’s destined for greatness.
       </p>
     </article>
 
+    <article>
+      <header>
+        <h2>Anonymous Thoughts</h2>
+        <p>
+          <time datetime="2025-09-25">September 25, 2025</time> ·
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+            by <span itemprop="name">Kyle Bramble</span>
+          </span>
+        </p>
+      </header>
+
+      <figure>
+        <img src="anon.jpeg" alt="Anonymous photo">
+      </figure>
+
+      <p>
+        Sometimes the best ideas come without a name. This post represents those fleeting thoughts and sparks of creativity that arrive unannounced. Not every idea needs an identity, but every idea deserves a space.
+      </p>
+    </article>
+
     <section aria-labelledby="newsletter">
       <h2 id="newsletter">Subscribe to the best Newsletter</h2>
-      <form action="#" method="post">
+
+      <form name="newsletter" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="newsletter">
         <fieldset>
           <legend>Get updates by email</legend>
           <label for="email">Email address</label>
           <input id="email" name="email" type="email" placeholder="you@example.com" required>
           <button type="submit">Subscribe</button>
         </fieldset>
+      </form>
+    </section>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact">Contact Me</h2>
+
+      <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+        <p>
+          <label>Your Name: <input type="text" name="name" required /></label>
+        </p>
+        <p>
+          <label>Your Email: <input type="email" name="email" required /></label>
+        </p>
+        <p>
+          <label>Your Role:
+            <select name="role[]" multiple>
+              <option value="leader">Leader</option>
+              <option value="follower">Follower</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label>Message: <textarea name="message" required></textarea></label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
       </form>
     </section>
   </main>
