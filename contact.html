@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — MI349 Blog</title>
+  <meta name="description" content="Contact form for MI349 Blog">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      line-height: 1.6;
+      margin: 0;
+    }
+    header, nav, footer { background: #f6f6f6; }
+    header { padding: 1rem; }
+    nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 1rem; }
+    nav a { text-decoration: none; color: #0b3d91; }
+    main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+    form fieldset { border: 1px solid #ddd; padding: 1rem; border-radius: 6px; }
+    label { display: block; margin-top: 0.8rem; }
+    input[type="text"], input[type="email"], select, textarea { width: 100%; padding: 0.6rem; font-family: inherit; font-size: inherit; }
+    textarea { min-height: 140px; }
+    button { margin-top: 1rem; padding: 0.6rem 1rem; font-family: inherit; font-size: inherit; }
+    footer { padding: 2rem 1rem; margin-top: 3rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MI349 Blog</h1>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <header>
+        <h2>Contact Me?</h2>
+      </header>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Send a message</legend>
+
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your full name" required>
+
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+          <label for="reason">Reason for contact</label>
+          <select id="reason" name="reason" required>
+            <option value="" selected disabled>Choose one…</option>
+            <option value="hi">hi</option>
+            <option value="contractor">Looking for a contractor</option>
+            <option value="interview">Interested in interview</option>
+          </select>
+
+          <label for="message">Your message</label>
+          <textarea id="message" name="message" placeholder="Write your message here…" required></textarea>
+
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </article>
+  </main>
+
+  <footer>
+    <small>&copy; <span id="year">2025</span> Bramble</small>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MI349 Blog</title>
+  <meta name="description" content="Personal blog">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      line-height: 1.6;
+      margin: 0;
+    }
+    header, nav, footer { background: #f6f6f6; }
+    header { padding: 1rem; }
+    nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 1rem; }
+    nav a { text-decoration: none; color: #0b3d91; }
+    main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+    article { margin-bottom: 3rem; }
+    figure { margin: 0; }
+    figure img { max-width: 100%; height: auto; border-radius: 6px; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    th, td { border: 1px solid #ddd; padding: 0.6rem; text-align: left; }
+    thead th { background: #fafafa; }
+    form fieldset { border: 1px solid #ddd; padding: 1rem; border-radius: 6px; }
+    form label { display: block; margin-top: 0.8rem; }
+    input[type="text"], input[type="email"] { width: 100%; padding: 0.6rem; font-family: inherit; font-size: inherit; }
+    button { margin-top: 1rem; padding: 0.6rem 1rem; font-family: inherit; font-size: inherit; }
+    footer { padding: 2rem 1rem; margin-top: 3rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MI349 Blog</h1>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <header>
+        <h2>The Best Blog Post</h2>
+        <p>
+          <time datetime="2025-09-27">September 27, 2025</time> ·
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+            by <span itemprop="name">Kyle Bramble</span>
+          </span>
+        </p>
+      </header>
+
+      <figure>
+ <img src="best.jpeg" alt="Best photo">
+      </figure>
+
+      <p>
+      Welcome to the greatest blog post ever written—seriously. This masterpiece blends crisp insights, clear takeaways, and just the right dash of personality to keep you hooked from the first sentence to the final period. You’ll find practical tips you can use today, a story worth sharing, and a voice that treats you like a friend, not a lecture hall. If you came for value, you’ll leave with new ideas; if you came for entertainment, you’ll leave smiling. Grab your coffee, settle in, and enjoy the best blog post you’ll read all week.
+      </p>
+      <p>
+        And just when you think it couldn’t get any better, this blog post goes above and beyond by giving you something rare: a genuine spark of inspiration. It doesn’t just inform—it motivates. It doesn’t just tell a story—it invites you to be part of it. That’s why readers keep coming back, sharing it with friends, and bookmarking it for later. This isn’t just another article floating around the internet; it’s a standard-setter, a bold declaration that great writing still matters, and you’ve found it right here.
+      </p>
+      
+      <h3>Deep Analysis of Other Blogs</h3>
+      <table>
+  <thead>
+    <tr>
+      <th>This blog</th>
+      <th>Other blogs</th>
+      <th>Empty Column?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>The Best</td>
+      <td>Literal garbage</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>funny!</td>
+      <td>funny?</td>
+      <td>Indeed</td>
+    </tr>
+  </tbody>
+</table>
+    </article>
+
+    <article>
+      <header>
+        <h2>The Big Bang</h2>
+        <p>
+          <time datetime="2025-09-26">September 26, 2025</time> ·
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+            by <span itemprop="name">Kyle Bramble</span>
+          </span>
+        </p>
+      </header>
+
+        <figure>
+<img src="dj.jpeg" alt="DJ photo">
+      </figure>
+
+      <p>
+     What makes this blog post even more special is that it’s the very first one to ever appear here. A true beginning, a starting point, and a foundation for everything that comes next. 
+      </p>
+      <p>
+        There’s a certain magic about firsts—they set the tone, capture the excitement, and remind us that every great journey starts with a single step. This post isn’t just content on a page; it’s history in the making, the cornerstone of a blog that’s destined for greatness.
+      </p>
+    </article>
+
+    <section aria-labelledby="newsletter">
+      <h2 id="newsletter">Subscribe to the best Newsletter</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Get updates by email</legend>
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+          <button type="submit">Subscribe</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <small>&copy; <span id="year">2025</span> Bramble</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
